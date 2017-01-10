@@ -1,0 +1,129 @@
+
+// skitch measurments 
+
+    *{
+         box-sizing: border-box;
+    }
+
+
+    body {
+
+        padding:0px;
+        margin:0px;
+
+    }
+
+ 
+           
+    .main {
+            
+        display:flex;
+        width: 100%;
+        min-height: 100%;
+        flex-flow: column nowrap;
+        background: url(../Media/backimg.jpeg) no-repeat center center fixed;
+    	background-size: cover;        
+
+
+
+       //>* {flex-basis: 100%; flex-grow:0;}
+
+        .header {
+
+                    flex-basis: 4.6875vw;
+                    background: #ffffff;            
+                    display: flex;
+                    flex-flow: row nowrap;
+                    
+                    
+                    .logo{
+
+                    justify-content: center;    
+                    width: 7.7734375vw;
+                    $logo-h:(0.3015)*(7.7734375vw);
+                    height : $logo-h;
+                    $margin-h: 0.5*$logo-h;  
+                    margin-left: 27.1875vw; 
+                    margin-top: $margin-h; 	
+
+                    }
+                                                 
+            
+        }
+
+        .menu{
+
+                        background :#dd0000;
+                        flex-basis: 1.5625vw;
+                        display: flex;
+                        flex-flow: row nowrap;
+                        
+
+                        $nav-w: 20.585vw;       
+                        $nav-h: 0.0341555*$nav-w;
+                        $nav-ml: 27.1875vw;
+                        $nav-mr: 52.2vw;
+                        $nav-mt:0.27*$nav-h;
+
+
+                        list-style-type: none;
+                        overflow: visible;
+
+                        .navbar{ 
+                              
+                              flex-grow: 1;
+                              margin-left: $nav-ml;
+                              margin-right:$nav-mr;
+                              
+                              display:flex;
+                              flex-flow: row nowrap; 
+                              align-content: center;
+                              align-items:center;
+                              justify-content: space-between;
+                                
+                              a {
+                                    font-family: Roboto;                                    
+                                    color: white;
+                                    font-size: inherit;
+                                    font-size: 0.8vw;
+                                    font-weight: normal;
+                                    font-style: normal;
+                                    font-stretch: normal;
+                                    text-decoration: none;
+                                    
+                            }
+                        }    
+                            
+                            
+
+        }
+
+        
+
+        .body{
+
+                        flex-grow: 1;
+                        display: flex;
+                        flex-flow: row nowrap;
+                        .side1{  	flex-basis: 26.56vw;}
+                        .content  { flex-basis:46.875vw;
+                                    border: dotted;
+                        }
+                        .side2{  	flex-basis:26.55vw; }
+
+
+        }
+
+
+        .footer{
+
+                        opacity: 0.6;
+                        background-color: #000000;
+                        flex-basis: 6.25vw;
+
+        }
+
+
+}	
+        
+
