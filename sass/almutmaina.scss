@@ -25,86 +25,117 @@
 
         padding:0px;
         margin:0px;
+        @include flex(column, nowrap,"" ,"",""); 
+        @include flex-justify(stretch);
+        min-height: 100vh;
+        
 
     }
 
 
- #main {
-            
+        #main { 
+
+                @include flex-item(1, 0,auto);
+                width: 100%;  
+                min-height: 100vh; 
+                @include flex(column, nowrap,"" ,"",""); 
+                background: darkcyan;    
+                
        
-        width: 100%;
-        min-height: 100vh;
-         
-        @include flex(column, nowrap,"" ,"","");
-       
-        #header {
-                    
-                   
-                    @include flex-item(0, 0,120px);
-                    width: 100%;
-                    background: #ffffff;            
-                    @include flex(row, nowrap,flex-start ,"",center);
-                    @include bp(small){ @include flex-justify(center)}
-                  
-                   #logo-margin{
-                       
-                       @include flex-item(0, 0, 27%); 
-                       @include bp(small){ @include flex-item(0, 0, 0%); display:none;}
-                       }
-
-        }
-
-                #menu{
-
-                        background :#dd0000;
-                        @include flex-item(0, 0, 40px);
-                        @include bp(small){@include flex-item(1, 0, 40px);}
-                        @include flex(row, nowrap,"" ,"","");
-                        list-style-type: none;
-                        overflow: visible;
-
-                        #navbar{ 
-                              
-                              @include flex-item(1, 0, 0);
-                              margin-left:27%;
-                              margin-right:52%;
-                              @include flex(row, nowrap,space-between ,center,center); 
-                              @include bp(small){ @include flex(column, nowrap,space-around ,center,center); margin:0px;}
-
-                                
-                              a {
-                                    font-family: Roboto;                                    
-                                    color: white; 
-                                    padding: 0px 20px 0px 0px;
-                                    
-                                    font-size: inherit;
-                                    font-size: auto;
-                                    font-weight: normal;
-                                    font-style: normal;
-                                    font-stretch: normal;
-                                    text-decoration: none;
-
-                                    @include bp(small){ padding:0px; @include flex-item(0,0,30px);font-size: 20px; }
-                                    
-                            }
-                        }    
+                #header {
                             
-                            
+                        
+                            @include flex-item(0, 0,160px);
+                            width: 100%;
+                            background: #ffffff;
+                            position: absolute; 
+                            left:0;
+                            top:0;            
+                            @include flex(column, nowrap,"" ,"","");
+                            @include bp(small){ @include flex-justify(center)}
 
-                 }
+                            #logo-container{
+                                @include flex-item(0, 0, 120px);
+                                @include flex(row, nowrap,flex-start ,"",center);
+                                @include bp(small){ @include flex-justify(center)}
+                        
+                                #logo-margin{
+                                    
+                                            @include flex-item(0, 0, 27%); 
+                                            @include bp(small){ @include flex-item(0, 0, 0%); display:none;}
+                                            }
+
+                                }
+
+                           #menu{
+
+                                background :#dd0000;
+                                @include flex-item(0, 0, 40px);
+                                @include bp(small){@include flex-item(1, 0, auto);}
+                                @include flex(row, nowrap,"" ,"","");
+                                list-style-type: none;
+                                overflow: visible;
+
+                                #navbar{ 
+                                    
+                                    @include flex-item(1, 0, 0);
+                                    margin-left:27%;
+                                    margin-right:52%;
+                                    @include flex(row, nowrap,space-between ,center,center); 
+                                    @include bp(small){ @include flex-item(1, 0, 100%);; @include flex(column, nowrap,center ,center,center); margin:0px;}
+
+                                        
+                                    a {
+                                            font-family: Roboto;                                    
+                                            color: white; 
+                                            padding: 0px 20px 0px 0px;
+                                            
+                                            font-size: inherit;
+                                            font-size: auto;
+                                            font-weight: normal;
+                                            font-style: normal;
+                                            font-stretch: normal;
+                                            text-decoration: none;
+
+                                            @include bp(small){ 
+                                                padding:0px; 
+                                                @include flex-item(0,0,30px);
+                                                font-size: 20px; 
+                                                
+                                                
+                                               }
+                                            
+                                    }
+                                }    
+                                    
+                                    
+
+                        }
+
+                }
+
+
 
                 #section1{
-
-                        @include flex-item(1,0,100%);
+                        height: auto;
+                        @include flex-item(1,0,auto);
                         @include flex(column, nowrap,"" ,"","");
                         background: url(../Media/backimg.jpeg) ;
     	                background-size: cover;
                         background-repeat: no-repeat;
-                        background-position: center center; 
+                        background-position: center center;
+
+                        #section1-margin {
+                          
+                           @include flex-item(0, 0, 160px); 
+                           @include bp(small){ @include flex-item(0, 0, 270px);}
+
+
+                        } 
                                                
                         #felx-container1{
                             
-                            @include flex-item(1, 0,0);
+                            @include flex-item(1, 0,auto);
                             @include flex(row, nowrap,"" ,"","");
 
                             #side1,#side2{  	
@@ -137,8 +168,10 @@
 
                                     }           
                         }   
+
                 }
-  }
+                }
+
 
   #testDiv {
     height: 0px;
