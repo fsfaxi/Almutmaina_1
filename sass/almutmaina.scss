@@ -36,7 +36,7 @@
         #main { 
 
                 @include flex-item(1, 0,auto);
-                width: 100%;  
+                width: 100%; 
                 min-height: 100vh; 
                 @include flex(column, nowrap,"" ,"",""); 
                 background: darkcyan;    
@@ -52,18 +52,19 @@
                             left:0;
                             top:0;            
                             @include flex(column, nowrap,"" ,"","");
+                            
                             @include bp(small){ @include flex-justify(center)}
 
                             #logo-container{
+
+                                width:100%;
+                                max-width: 1200px;
+                                margin: 0 auto;
+                              
                                 @include flex-item(0, 0, 120px);
                                 @include flex(row, nowrap,flex-start ,"",center);
                                 @include bp(small){ @include flex-justify(center)}
-                        
-                                #logo-margin{
-                                    
-                                            @include flex-item(0, 0, 27%); 
-                                            @include bp(small){ @include flex-item(0, 0, 0%); display:none;}
-                                            }
+
 
                                 }
 
@@ -72,39 +73,60 @@
                                 background :#dd0000;
                                 @include flex-item(0, 0, 40px);
                                 @include bp(small){@include flex-item(1, 0, auto);}
-                                @include flex(row, nowrap,"" ,"","");
-                                list-style-type: none;
-                                overflow: visible;
 
                                 #navbar{ 
                                     
-                                    @include flex-item(1, 0, 0);
-                                    margin-left:27%;
-                                    margin-right:52%;
-                                    @include flex(row, nowrap,space-between ,center,center); 
-                                    @include bp(small){ @include flex-item(1, 0, 100%);; @include flex(column, nowrap,center ,center,center); margin:0px;}
+                                    width: 100%;
+                                    height: 100%;
+                                    max-width: 1200px;
+                                    margin :0 auto ;
+                                                 
 
-                                        
-                                    a {
-                                            font-family: Roboto;                                    
-                                            color: white; 
-                                            padding: 0px 20px 0px 0px;
-                                            
-                                            font-size: inherit;
-                                            font-size: auto;
-                                            font-weight: normal;
-                                            font-style: normal;
-                                            font-stretch: normal;
-                                            text-decoration: none;
 
-                                            @include bp(small){ 
-                                                padding:0px; 
-                                                @include flex-item(0,0,30px);
-                                                font-size: 20px; 
+                                    ul {
+
+                                            list-style: none;
+                                            text-align: left;
+                                            padding: 0;
+                                            margin:0;
+                                            height: 100%;
+
+                                            li {
+
+                                                font-family: Roboto;                                    
+                                                font-size: auto;
+                                                display: inline-block;
                                                 
+                                                height: 40px;
+                                                line-height: 40px;
+                                                @include bp(small){
+                                                     display: block;
+                                                     height: 50px;
+                                                     line-height: 50px; 
+                                                     }
                                                 
-                                               }
-                                            
+                                                       
+                                                a {
+                                                    color: white;
+                                                    text-decoration: none;
+                                                    display: block;
+                                                    padding: 0 15px;
+                                                    transition: .2s background-color;
+                                                    font-size: 20px;
+
+                                                    @include bp(small){
+                                                        text-align: center; 
+                                                        font-size: 20px; 
+                                                        padding: 0;
+                                                                                                      
+                                                        }
+                                                        
+                                                }
+                                                a:hover {
+                                                    color: #dd0000;
+                                                    background-color: whitesmoke;
+                                                    }
+                                            }
                                     }
                                 }    
                                     
@@ -117,7 +139,8 @@
 
 
                 #section1{
-                        height: auto;
+ 
+                        //height: auto;
                         @include flex-item(1,0,auto);
                         @include flex(column, nowrap,"" ,"","");
                         background: url(../Media/backimg.jpeg) ;
@@ -128,28 +151,27 @@
                         #section1-margin {
                           
                            @include flex-item(0, 0, 160px); 
-                           @include bp(small){ @include flex-item(0, 0, 270px);}
+                           @include bp(small){ @include flex-item(0, 0, 370px);}
 
 
                         } 
                                                
                         #felx-container1{
-                            
-                            @include flex-item(1, 0,auto);
-                            @include flex(row, nowrap,"" ,"","");
 
-                            #side1,#side2{  	
-                                
-                                @include flex-item(0, 0,27%);
-                                @include bp(small){ display:none;}
-                                
-                                }
+                            height: auto;
+                            @include flex-item(1, 0,auto);
+                            @include flex(column, nowrap,"" ,"","");
+
+
                             
                             #content  { 
                             
-                                @include flex-item(0, 0,46%);
+                                @include flex-item(1, 0,auto);
                                 border: dotted;
-                                @include bp(small){ @include flex-item(0, 0,100%);}                                    
+                                width: 100%;
+                                max-width: 1200px;
+                                margin:0 auto;
+                                @include bp(small){ @include flex-item(1, 0,100%);}                                    
                             
                             }
                         }
@@ -172,10 +194,10 @@
                 }
                 }
 
+            
+
 
   #testDiv {
-    height: 1200px;
-    background: palegoldenrod;
-    opacity: 70%;
+
 }
  
