@@ -199,11 +199,11 @@
 
 @mixin flex-item($grow, $shrink, $basis)
 {
-    @if($basis != auto){
+    /*@if($basis != auto){
      @if(unit($basis)==""){
         $basis: units2pixels($basis);
     }
-    }
+    }*/
     -moz-box-flex: $grow;
     -webkit-box-flex:$grow;
     -ms-flex:$grow $shrink $basis;
