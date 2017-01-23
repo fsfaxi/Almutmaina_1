@@ -11,50 +11,7 @@
                
 	 </style>
 
-	 <script>
-	 		var m=false;
-			function myMenu() {
 
-					var small = window.matchMedia('@media all and (max-width: 700px)');
-				    var menu= document.getElementById("menu");
-					var mnav= document.getElementById("mnav");
-					var ul_li = document.getElementById("myul").querySelectorAll(" li:not(:first-child)");
-					var ul_icon = document.getElementById("myul").querySelectorAll(" li:first-child");
-					var section1_m = document.getElementById("section1-margin");
-
-					if (m==false){
-						menu.className += " menu_responisve";
-						section1_m.className += " sm-flex-item";
-						ul_icon[0].style.cssText += 'position:relative; right:0; left:0;';
-						
-						var i;
-						for (i = 0; i < ul_li.length; i++) {
-							ul_li[i].className = 'display-li';
-						}
-
-						m=true;
-											
-					}else{
-						menu.style.cssText += 'height:40px;';
-						ul_icon[0].style.cssText += '';
-						section1_m.className = " ";
-						menu.className = " ";
-
-						var i;
-						for (i = 0; i < ul_li.length; i++) {
-
-							ul_li[i].className = ' display-none';
-						}	
-
-						m= false;
-					}
-								
-
-			}
-			function myIcon(x) {
-  				  x.classList.toggle("change");
-			}
-	</script>
 
  </head>
 	 <body id="body" >
@@ -62,25 +19,36 @@
 	
 		<div id="main"> 
 				<header id="header" >
-					<div id="logo-container"><img src="Media/logo.png" id="logo"> </div>
-					<div id="menu" >
-						<nav id="nav-container">
-							<ul id="myul" >	
-								<li class="icon">
-    								<div class="container" href="javascript:void(0);" onclick="myIcon(this),myMenu()">
-										<div class="bar1"></div>
-										<div class="bar2"></div>
-										<div class="bar3"></div>
-									</div>
-								</li>
+					
+					<label for="menu-toggle" id="menu-icon"></label>	 
+					<input type="checkbox" id="menu-toggle"/>
+     				<div id="menu-container-mobile" class="menu-mobile">
+							
+							<ul id="ul-mobile">
+									
 								<li><a href="">Home</a></li>
 								<li><a href="">About</a></li>
 								<li><a href="">Security</a></li>
 								<li><a href="">Technology</a></li>
 								<li><a href="">Contacts</a></li>
-
+																	
 							</ul>
-						</nav>
+					</div>
+					<div id="header-inner">
+						<div id="logo-container"><img src="Media/logo.png" id="logo"> </div>
+						<div id="menu" >
+							<nav id="nav-container">
+
+								<ul id="ul-main" >	
+									<li><a href="">Home</a></li>
+									<li><a href="">About</a></li>
+									<li><a href="">Security</a></li>
+									<li><a href="">Technology</a></li>
+									<li><a href="">Contacts</a></li>
+
+								</ul>
+							</nav>
+						</div>
 					</div>
 				</header>
 
